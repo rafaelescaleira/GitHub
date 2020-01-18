@@ -22,6 +22,7 @@
 <p align="center">
 <img src="https://github.com/rafaelescaleira/GitHub/blob/master/Assets/Screen%20Light%201.png" width="25%"/>
 <img src="https://github.com/rafaelescaleira/GitHub/blob/master/Assets/Screen%20Light%202.png" width="25%"/>
+<img src="https://github.com/rafaelescaleira/GitHub/blob/master/Assets/Screen%20Shot%202020-01-18%20at%2017.32.09.png" width="25%"/>
 </p>
 
 ## Dark
@@ -29,4 +30,5 @@
 <p align="center">
 <img src="https://github.com/rafaelescaleira/GitHub/blob/master/Assets/Screen%20Dark%201.png" width="25%"/>
 <img src="https://github.com/rafaelescaleira/GitHub/blob/master/Assets/Screen%20Dark%202.png" width="25%"/>
+<img src="https://github.com/rafaelescaleira/GitHub/blob/master/Assets/Screen%20Shot%202020-01-18%20at%2017.32.39.png" width="25%"/>
 </p>
