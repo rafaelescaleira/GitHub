@@ -4,7 +4,7 @@
 
 # <div align = "center"> GitHub Developer (iOS) </div>
 
-<p align="center">Built for Developer</p>
+### <div align = "center"> Built for Developer </div>
 
 <p></p>
 <p align="center">
