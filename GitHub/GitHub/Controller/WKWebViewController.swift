@@ -45,7 +45,7 @@ extension WKWebViewController: WKNavigationDelegate {
             
             DispatchQueue.main.async {
                 
-                if isSuccess { self.dismiss(animated: true, completion: nil) }
+                if isSuccess { self.performSegue(withIdentifier: "Home", sender: nil) }
                 else {  }
             }
         }

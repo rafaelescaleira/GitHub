@@ -16,6 +16,8 @@ struct GitHubAPIV4 {
     static let scope = "read:user,user:email"
     static let tokenURL = "https://github.com/login/oauth/access_token"
     
+    static let repositories = "https://api.github.com/users/rafaelescaleira/repos"
+    
     static func getURL() -> URL? {
         
         let uuid = UUID().uuidString
@@ -67,5 +69,47 @@ struct GitHubAPIV4 {
         }
         
         task.resume()
+    }
+    
+    static func getRepositories(urlString: String, completion: @escaping ([RepositoriesCodable]) -> ()) {
+        
+        guard let url = URL(string: urlString) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = URL.HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            
+            do {
+                
+                guard let data = data else { return }
+                let codable = try JSONDecoder().decode([RepositoriesCodable].self, from: data)
+                
+                DispatchQueue.main.async { completion(codable) }
+            }
+                
+            catch {}
+            
+        }).resume()
+    }
+    
+    static func getContents(urlString: String, completion: @escaping ([ContentsCodable]) -> ()) {
+        
+        guard let url = URL(string: urlString) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = URL.HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            
+            do {
+                
+                guard let data = data else { return }
+                let codable = try JSONDecoder().decode([ContentsCodable].self, from: data)
+                
+                DispatchQueue.main.async { completion(codable) }
+            }
+                
+            catch {}
+            
+        }).resume()
     }
 }
